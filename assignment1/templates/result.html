@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <style>
+        body { background-color: linen; }
+    </style>
+  </head>
+  <body>
+    <h2>Result</h2>
+    {% if result %}
+    <div>
+      {{ result|safe }}
+    </div>
+    {% endif %}
+  </body>
+</html>

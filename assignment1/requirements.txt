@@ -1,0 +1,7 @@
+Flask
+flask_restful
+io
+spacy
+streamlit
+annotated_text
+matplotlib.pyplot

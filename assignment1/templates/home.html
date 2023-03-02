@@ -1,0 +1,20 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <style>
+        body { background-color: linen; }
+    </style>
+
+</head>
+
+<body>
+    <form action="{{ url_for('results') }}" name="get_text" method="post">
+        <label for="text_for_NER">Please provide some text:</label>
+        <textarea id="text_for_NER" name="text_for_NER" cols="45" rows="8" required="required"></textarea>
+        <input type="submit" value="Send to Spacy">
+    </form>
+</body>
+
+</html>
