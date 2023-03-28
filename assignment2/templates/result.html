@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <style>
+        body { background-color: linen; }
+    </style>
+  </head>
+  <body>
+    <div class="links">
+      [<a href="{{url_for('home')}}">Home</a> |
+      <a href="{{url_for('list_from_db')}}">List</a>]
+    </div>
+    <h2>Result</h2>
+    {% if result %}
+    <div class="results">
+      {{ result|safe }}
+    </div>
+    {% endif %}
+  </body>
+</html>

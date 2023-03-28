@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <style>
+        body { background-color: linen; }
+    </style>
+
+</head>
+
+<body>
+    <div class="links">
+      [<a href="{{url_for('list_from_db')}}">List</a> |
+      <a href="{{url_for('results')}}">NER</a>]
+    </div>
+    <form action="{{ url_for('results') }}" name="get_text" method="post">
+        <label for="text_for_NER">Replace the text below (or use it) and click submit.</label>
+        <textarea cols="45" id="text_for_NER" name="text_for_NER" required="required" rows="8">When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously. “I can tell you very senior CEOs of major American car companies would shake my hand and turn away because I wasn’t worth talking to,” said Thrun, in an interview with Recode earlier this week.
+        </textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

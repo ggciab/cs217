@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <style>
+        body { background-color: linen; }
+    </style>
+  </head>
+  <body>
+    <div class="links">
+      [<a href="{{url_for('home')}}">Home</a> |
+      <a href="{{url_for('results')}}">NER</a>]
+    </div>
+    <p>All entities seen so far:</p>
+    <table>
+      <tr>
+        <th>Entity</th>
+        <th>Label</th>
+        <th>Occurrences</th>
+      </tr>
+    {% for ent, label, count in entities %}
+      <tr>
+        <td>{{ent}}</td>
+        <td>{{label}}</td>
+        <td class="count">{{count}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  </body>
+</html>
